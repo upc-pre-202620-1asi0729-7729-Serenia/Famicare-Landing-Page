@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "ariaLabel": "Main navigation",
+    "howItWorks": "How it works",
+    "benefits": "Benefits",
+    "opensource": "Open source",
+    "about": "About us",
+    "cta": "Request access",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language"
+  },
+  "hero": {
+    "badge": "Technology that cares with you",
+    "headlineStart": "Close to the people you love,",
+    "headlineHighlight": "wherever you are.",
+    "subheadline": "Famicare connects families with their older adults through real-time location, safe zones and timely alerts, without taking away their independence.",
+    "cta": "I want to discover Famicare",
+    "demo": "See how it works",
+    "checks": ["Easy to use", "Privacy first", "Open source"],
+    "imageAlt": "An older father out for a walk with his daughter",
+    "status": {
+      "label": "Current status",
+      "online": "Online",
+      "title": "Dad is at home",
+      "updated": "Updated just now"
+    },
+    "zone": {
+      "title": "Safe zone active",
+      "detail": "Home · 300 m radius"
+    }
+  },
+  "highlights": {
+    "items": [
+      { "title": "Support", "text": "without intruding on their autonomy" },
+      { "title": "Timely alerts", "text": "to act quickly" },
+      { "title": "One network", "text": "for the whole family" }
+    ]
+  },
+  "features": {
+    "badge": "Connected care",
+    "titleStart": "More peace of mind for you.",
+    "titleHighlight": "More freedom for them.",
+    "subtitle": "The essential information, without the hassle. Famicare brings together the tools your network needs to give better support.",
+    "items": {
+      "location": {
+        "title": "Real-time location",
+        "description": "See where your loved one is and review their recent activity on a clear, accessible map."
+      },
+      "safeZones": {
+        "title": "Safe zones",
+        "description": "Set up trusted places and get an alert whenever your loved one enters or leaves them."
+      },
+      "alerts": {
+        "title": "Alerts that matter",
+        "description": "Get notified when they leave a zone, stay inactive for too long, or press the help button."
+      },
+      "careNetwork": {
+        "title": "Care network",
+        "description": "Invite relatives and caregivers to coordinate responsibilities from one place."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Simple from day one",
+    "titleStart": "Three steps to care",
+    "titleHighlight": "as a team.",
+    "subtitle": "Designed for real families: simple setup, easy-to-understand information and actionable notices.",
+    "steps": [
+      {
+        "title": "Create your network",
+        "text": "Add your loved one and invite the people involved in their care."
+      },
+      {
+        "title": "Link the device",
+        "text": "Connect the IoT bracelet or pendant with GPS and a help button."
+      },
+      {
+        "title": "Stay by their side, calmly",
+        "text": "Check their location and get notified only when they really need you."
+      }
+    ]
+  },
+  "clientFeatures": {
+    "badge": "Made for people",
+    "titleStart": "Clear information to make",
+    "titleHighlight": "better decisions.",
+    "subtitle": "No hard-to-read data. Every screen prioritizes what you need to know right now and who can help.",
+    "points": [
+      "Device status and battery always in view.",
+      "Clear roles for relatives and caregivers.",
+      "Location and activity history in one place."
+    ],
+    "dashboard": {
+      "label": "Overview",
+      "greeting": "Good morning, Andrea",
+      "mapLabel": "Map showing the current location",
+      "device": "Device",
+      "deviceStatus": "Connected",
+      "battery": "Battery",
+      "batteryLevel": "82%",
+      "noticeTitle": "Alert handled",
+      "noticeText": "The care network is already aware."
+    }
+  },
+  "opensource": {
+    "title": "Open to move forward together.",
+    "text": "Famicare is an open source project under development. We build transparently so the community can review, learn and contribute to more human care technology.",
+    "cta": "I want to take part",
+    "note": "Soon we will share the public repository and the contribution guide."
+  },
+  "aboutTeam": {
+    "badge": "Created by Serenia",
+    "titleStart": "Caring from afar shouldn't feel",
+    "titleHighlight": "distant.",
+    "text": "We are a Peruvian startup building accessible care and safety solutions for older adults, focused on families' peace of mind and respect for each person's autonomy.",
+    "mission": {
+      "title": "Our mission",
+      "text": "To provide peace of mind through inclusive, easy-to-use technology."
+    },
+    "vision": {
+      "title": "Our vision",
+      "text": "To be a reference in connected care across Latin America."
+    }
+  },
+  "contact": {
+    "badge": "Early access",
+    "titleStart": "Be part of a new way of",
+    "titleHighlight": "staying close.",
+    "subtitle": "Leave us your email to follow the project's progress, try the first versions or collaborate with the community.",
+    "email": {
+      "label": "Email address",
+      "placeholder": "you@email.com",
+      "error": "Enter a valid email address."
+    },
+    "submit": "Keep me posted",
+    "sending": "Sending…",
+    "sendError": "We couldn't send your email. Please try again in a few minutes.",
+    "privacy": "No spam. Only important project updates.",
+    "success": {
+      "title": "Thanks for joining.",
+      "text": "We'll let you know when there's news about Famicare."
+    }
+  },
+  "footer": {
+    "description": "Care and safety technology to support with peace of mind and respect autonomy.",
+    "links": {
+      "benefits": "Benefits",
+      "howItWorks": "How it works",
+      "opensource": "Open source",
+      "about": "Serenia"
+    },
+    "copyright": "© {{year}} Serenia. Open source academic project.",
+    "tagline": "Designed with respect, clarity and care."
+  }
+}
