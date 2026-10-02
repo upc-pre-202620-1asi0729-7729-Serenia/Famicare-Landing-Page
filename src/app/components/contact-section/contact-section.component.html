@@ -1,0 +1,48 @@
+<section class="access section-space" id="acceso">
+  <div class="access__inner">
+
+    <div class="eyebrow access__badge">{{ 'contact.badge' | translate }}</div>
+    <h2 class="section-title">
+      {{ 'contact.titleStart' | translate }}
+      <span class="accent-serif accent-coral">{{ 'contact.titleHighlight' | translate }}</span>
+    </h2>
+    <p class="section-copy access__copy">{{ 'contact.subtitle' | translate }}</p>
+
+    @if (submitted()) {
+      <div class="access__success" role="status">
+        <span class="access__success-icon"><app-icon name="check" [size]="18"></app-icon></span>
+        <div>
+          <p class="access__success-title">{{ 'contact.success.title' | translate }}</p>
+          <p class="access__success-text">{{ 'contact.success.text' | translate }}</p>
+        </div>
+      </div>
+    } @else {
+      <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="access__form">
+        <label class="sr-only" for="email">{{ 'contact.email.label' | translate }}</label>
+        <input
+          id="email"
+          class="access__input"
+          type="email"
+          formControlName="email"
+          autocomplete="email"
+          [placeholder]="'contact.email.placeholder' | translate"
+          [attr.aria-invalid]="showEmailError"
+          [attr.aria-describedby]="showEmailError ? 'email-error' : null"
+        />
+        <button class="button-primary access__submit" type="submit" [disabled]="sending()">
+          {{ (sending() ? 'contact.sending' : 'contact.submit') | translate }}
+        </button>
+      </form>
+
+      @if (showEmailError) {
+        <p class="access__error" id="email-error" role="alert">{{ 'contact.email.error' | translate }}</p>
+      }
+      @if (sendFailed()) {
+        <p class="access__error" role="alert">{{ 'contact.sendError' | translate }}</p>
+      }
+    }
+
+    <p class="access__privacy">{{ 'contact.privacy' | translate }}</p>
+
+  </div>
+</section>

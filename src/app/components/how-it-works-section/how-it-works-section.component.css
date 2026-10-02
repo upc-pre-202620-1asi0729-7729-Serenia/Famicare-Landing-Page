@@ -1,0 +1,88 @@
+:host {
+  display: block;
+}
+
+.how {
+  background: var(--fc-ink);
+  color: #fff;
+}
+
+.how__inner {
+  padding-block: 5rem;
+}
+
+.how__grid {
+  display: grid;
+  gap: 3.5rem;
+}
+
+.how__badge {
+  margin-bottom: 1.25rem;
+}
+
+.how__title {
+  color: #fff;
+}
+
+.how__copy {
+  max-width: 28rem;
+  margin-top: 1.25rem;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.how__steps {
+  border-block: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.step {
+  display: grid;
+  gap: 1rem;
+  padding-block: 2rem;
+}
+
+.step + .step {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.step__number {
+  color: var(--fc-peach-soft);
+  font-family: var(--fc-font-serif);
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-style: italic;
+}
+
+.step__title {
+  font-size: 1.5rem;
+  line-height: calc(4 / 3);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.step__text {
+  max-width: 32rem;
+  margin-top: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.75rem;
+}
+
+@media (min-width: 40rem) {
+  .step {
+    grid-template-columns: 4rem 1fr;
+    padding-block: 2.25rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .how__inner {
+    padding-block: 7rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .how__grid {
+    grid-template-columns: 0.8fr 1.2fr;
+  }
+}

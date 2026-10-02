@@ -1,0 +1,90 @@
+:host {
+  display: block;
+}
+
+.opensource {
+  padding: 0 1.25rem 5rem;
+}
+
+.opensource__card {
+  max-width: 80rem;
+  margin-inline: auto;
+  overflow: hidden;
+  border-radius: 2.5rem;
+  background: var(--fc-peach);
+}
+
+.opensource__grid {
+  display: grid;
+  gap: 2.5rem;
+  padding: 3.5rem 1.75rem;
+}
+
+.opensource__icon {
+  display: grid;
+  width: 3rem;
+  height: 3rem;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--fc-ink);
+  color: #fff;
+}
+
+.opensource__title {
+  max-width: 42rem;
+  margin-top: 1.75rem;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+}
+
+.opensource__text {
+  max-width: 42rem;
+  margin-top: 1.25rem;
+  color: rgba(21, 60, 58, 0.75);
+  font-size: 1.125rem;
+  line-height: 2rem;
+}
+
+.opensource__action .button-dark {
+  justify-content: center;
+}
+
+.opensource__note {
+  max-width: 20rem;
+  margin-top: 1rem;
+  color: rgba(21, 60, 58, 0.65);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 48rem) {
+  .opensource {
+    padding-bottom: 7rem;
+  }
+
+  .opensource__grid {
+    padding: 4rem 3.5rem;
+  }
+
+  .opensource__title {
+    font-size: 3rem;
+    line-height: 1.25;
+  }
+}
+
+@media (min-width: 64rem) {
+  .opensource {
+    padding-inline: 2rem;
+  }
+
+  .opensource__grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    align-items: center;
+  }
+
+  .opensource__action {
+    justify-self: end;
+  }
+}

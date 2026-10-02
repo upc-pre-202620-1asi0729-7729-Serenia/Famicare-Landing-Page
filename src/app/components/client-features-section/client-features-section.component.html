@@ -1,0 +1,66 @@
+<section class="product section-space">
+  <div class="product__grid fc-container">
+
+    <!-- Dashboard mockup -->
+    <div class="mock">
+      <div class="mock__backdrop"></div>
+
+      <div class="mock__card">
+        <div class="mock__head">
+          <div>
+            <p class="mock__label">{{ 'clientFeatures.dashboard.label' | translate }}</p>
+            <p class="mock__greeting">{{ 'clientFeatures.dashboard.greeting' | translate }}</p>
+          </div>
+          <span class="mock__badge"><app-icon name="heart" [size]="17"></app-icon></span>
+        </div>
+
+        <div class="mock__map-frame" role="img" [attr.aria-label]="'clientFeatures.dashboard.mapLabel' | translate">
+          <div class="map-pattern">
+            <div class="map-pin"><app-icon name="location" [size]="18"></app-icon></div>
+          </div>
+        </div>
+
+        <div class="mock__stats">
+          <div class="mock__stat">
+            <app-icon name="watch" [size]="18"></app-icon>
+            <p class="mock__stat-label">{{ 'clientFeatures.dashboard.device' | translate }}</p>
+            <p class="mock__stat-value">{{ 'clientFeatures.dashboard.deviceStatus' | translate }}</p>
+          </div>
+          <div class="mock__stat">
+            <app-icon name="battery" [size]="18"></app-icon>
+            <p class="mock__stat-label">{{ 'clientFeatures.dashboard.battery' | translate }}</p>
+            <p class="mock__stat-value">{{ 'clientFeatures.dashboard.batteryLevel' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mock__notice">
+        <span class="mock__notice-icon"><app-icon name="alert" [size]="19"></app-icon></span>
+        <div>
+          <p class="mock__notice-title">{{ 'clientFeatures.dashboard.noticeTitle' | translate }}</p>
+          <p class="mock__notice-text">{{ 'clientFeatures.dashboard.noticeText' | translate }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Copy -->
+    <div>
+      <div class="eyebrow product__badge">{{ 'clientFeatures.badge' | translate }}</div>
+      <h2 class="section-title">
+        {{ 'clientFeatures.titleStart' | translate }}
+        <span class="accent-serif accent-coral">{{ 'clientFeatures.titleHighlight' | translate }}</span>
+      </h2>
+      <p class="section-copy product__copy">{{ 'clientFeatures.subtitle' | translate }}</p>
+
+      <ul class="product__points">
+        @for (key of points; track key) {
+          <li>
+            <span class="product__check"><app-icon name="check" [size]="15"></app-icon></span>
+            {{ key | translate }}
+          </li>
+        }
+      </ul>
+    </div>
+
+  </div>
+</section>
