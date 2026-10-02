@@ -1,1 +1,293 @@
-/* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/cyan-orange.css';
+/* Istok Web sigue en uso por las pantallas de registro / planes / pago. */
+@import "@fontsource/istok-web/index.css";
+@import "@fontsource/istok-web/700.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* La ventana es la que hace scroll. `clip` evita el scroll horizontal sin convertir
+   al <body> en contenedor de scroll (con `hidden` + `height: 100%` del tema de
+   Material, el body pasaba a ser el que scrolleaba y se rompía el scroll por anclas). */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: clip;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==========================================================================
+   Famicare · design tokens
+   ========================================================================== */
+:root {
+  --fc-bg: #f7f8f3;
+  --fc-surface: #ffffff;
+  --fc-ink: #153c3a;
+  --fc-ink-deep: #102f2d;
+  --fc-teal: #176b61;
+  --fc-teal-dark: #125a52;
+  --fc-coral: #df7455;
+  --fc-peach: #e7a98e;
+  --fc-peach-soft: #f3b09a;
+  --fc-mint: #e3f1e9;
+  --fc-mint-deep: #dcebe3;
+  --fc-text: #486562;
+  --fc-text-muted: #5c7471;
+  --fc-text-faint: #6b817f;
+  --fc-line: rgba(21, 60, 58, 0.1);
+
+  --fc-font-sans: "DM Sans", sans-serif;
+  --fc-font-serif: "DM Serif Display", serif;
+}
+
+/* ==========================================================================
+   Base de la landing (equivale al preflight de Tailwind usado en el diseño).
+   Está acotado a .landing (con :where → especificidad 0, como el preflight) para no alterar las pantallas de registro / pago.
+   ========================================================================== */
+:where(.landing) {
+  min-height: 100vh;
+  background: var(--fc-bg);
+  color: var(--fc-ink);
+  font-family: var(--fc-font-sans);
+  font-size: 1rem;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+:where(.landing) h1,
+:where(.landing) h2,
+:where(.landing) h3,
+:where(.landing) h4 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+:where(.landing) ul,
+:where(.landing) ol {
+  list-style: none;
+}
+
+:where(.landing) img,
+:where(.landing) svg,
+:where(.landing) video {
+  display: block;
+  max-width: 100%;
+}
+
+:where(.landing) img,
+:where(.landing) video {
+  height: auto;
+}
+
+:where(.landing) a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:where(.landing) button,
+:where(.landing) input,
+:where(.landing) textarea {
+  font: inherit;
+  color: inherit;
+}
+
+:where(.landing) button {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(.landing) a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(.landing) ::placeholder {
+  color: color-mix(in oklab, currentColor 50%, transparent);
+  opacity: 1;
+}
+
+:where(.landing) ::selection {
+  background: var(--fc-peach);
+  color: var(--fc-ink);
+}
+
+:where(.landing) :focus-visible {
+  outline: 2px solid var(--fc-teal);
+  outline-offset: 3px;
+}
+
+/* Que las anclas no queden tapadas por el header fijo (5rem). */
+.landing section[id] {
+  scroll-margin-top: 5rem;
+}
+
+/* ==========================================================================
+   Piezas compartidas
+   ========================================================================== */
+.fc-container {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+.accent-serif {
+  font-family: var(--fc-font-serif);
+  font-weight: 400;
+  font-style: italic;
+}
+
+.accent-teal { color: var(--fc-teal); }
+.accent-coral { color: var(--fc-coral); }
+.accent-peach { color: var(--fc-peach-soft); }
+
+.nav-link {
+  position: relative;
+  color: var(--fc-text);
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: color 180ms ease;
+}
+
+.nav-link::after {
+  position: absolute;
+  right: 0;
+  bottom: -0.45rem;
+  left: 0;
+  height: 2px;
+  content: "";
+  background: var(--fc-coral);
+  transform: scaleX(0);
+  transition: transform 180ms ease;
+}
+
+.nav-link:hover {
+  color: var(--fc-ink);
+}
+
+.nav-link:hover::after {
+  transform: scaleX(1);
+}
+
+.button-primary,
+.button-secondary,
+.button-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  border-radius: 999px;
+  padding: 0.95rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 800;
+  line-height: 1.5;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+}
+
+.button-primary {
+  background: var(--fc-teal);
+  color: #fff;
+  box-shadow: 0 12px 30px -16px rgba(23, 107, 97, 0.85);
+}
+
+.button-primary:hover,
+.button-dark:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px -16px rgba(21, 60, 58, 0.75);
+}
+
+.button-primary:hover {
+  background: var(--fc-teal-dark);
+}
+
+.button-secondary {
+  border: 1px solid rgba(21, 60, 58, 0.18);
+  background: rgba(255, 255, 255, 0.62);
+  color: var(--fc-ink);
+}
+
+.button-secondary:hover {
+  border-color: rgba(21, 60, 58, 0.35);
+  background: #fff;
+}
+
+.button-dark {
+  background: var(--fc-ink);
+  color: #fff;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  border: 1px solid rgba(21, 60, 58, 0.12);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.62);
+  padding: 0.48rem 0.8rem;
+  color: var(--fc-teal);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.5;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.eyebrow-dark {
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--fc-peach-soft);
+}
+
+.section-space {
+  padding-block: 7rem;
+}
+
+.section-title {
+  font-size: clamp(2.45rem, 5vw, 4.3rem);
+  line-height: 1.04;
+  font-weight: 800;
+  letter-spacing: -0.052em;
+  text-wrap: balance;
+}
+
+.section-copy {
+  color: var(--fc-text-muted);
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+@media (min-width: 1024px) {
+  .fc-container {
+    padding-inline: 2rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .section-space {
+    padding-block: 5rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .landing *,
+  .landing *::before,
+  .landing *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
