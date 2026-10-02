@@ -1,0 +1,26 @@
+<footer class="footer">
+  <div class="footer__inner fc-container">
+
+    <div class="footer__top">
+      <div>
+        <a class="footer__brand" href="#inicio">
+          <span class="footer__mark"><app-icon name="heart" [size]="19"></app-icon></span>
+          <span class="footer__name">Famicare</span>
+        </a>
+        <p class="footer__description">{{ 'footer.description' | translate }}</p>
+      </div>
+
+      <nav class="footer__links">
+        @for (link of links; track link.href) {
+          <a class="footer-link" [href]="link.href">{{ link.labelKey | translate }}</a>
+        }
+      </nav>
+    </div>
+
+    <div class="footer__bottom">
+      <p>{{ 'footer.copyright' | translate: { year: year } }}</p>
+      <p>{{ 'footer.tagline' | translate }}</p>
+    </div>
+
+  </div>
+</footer>

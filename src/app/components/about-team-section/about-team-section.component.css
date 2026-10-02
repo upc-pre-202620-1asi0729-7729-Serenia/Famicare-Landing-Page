@@ -1,0 +1,66 @@
+:host {
+  display: block;
+}
+
+.about {
+  border-block: 1px solid var(--fc-line);
+  background: #fff;
+}
+
+.about__grid {
+  display: grid;
+  gap: 3rem;
+  padding-block: 5rem;
+}
+
+.about__badge {
+  margin-bottom: 1.25rem;
+}
+
+.about__pillars {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.pillar {
+  border-left: 2px solid var(--fc-teal);
+  padding-left: 1.25rem;
+}
+
+.pillar--mission {
+  border-left-color: var(--fc-coral);
+}
+
+.pillar__title {
+  font-weight: 800;
+}
+
+.pillar__text {
+  margin-top: 0.5rem;
+  color: var(--fc-text-faint);
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+}
+
+@media (min-width: 40rem) {
+  .about__pillars {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 48rem) {
+  .about__grid {
+    padding-block: 6rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .about__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .about__body {
+    padding-top: 1rem;
+  }
+}

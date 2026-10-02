@@ -1,0 +1,124 @@
+<header class="site-header">
+  <nav class="site-nav fc-container" [attr.aria-label]="'nav.ariaLabel' | translate">
+    <a class="brand" href="#inicio" (click)="closeMenu()">
+      <span class="brand__mark"><app-icon name="heart" [size]="19"></app-icon></span>
+      <span class="brand__name">Fami<span class="brand__accent">care</span></span>
+    </a>
+
+    <div class="site-nav__links">
+      @for (item of navItems; track item.href) {
+        <a class="nav-link" [href]="item.href">{{ item.labelKey | translate }}</a>
+      }
+    </div>
+
+    <div class="site-nav__actions">
+      <app-language-switcher></app-language-switcher>
+
+      <a class="button-primary site-nav__cta" href="#acceso">
+        {{ 'nav.cta' | translate }}
+        <app-icon name="arrow" [size]="18"></app-icon>
+      </a>
+
+      <button
+        type="button"
+        class="menu-btn"
+        (click)="toggleMenu()"
+        [attr.aria-expanded]="menuOpen()"
+        aria-controls="mobile-menu"
+        [attr.aria-label]="(menuOpen() ? 'nav.closeMenu' : 'nav.openMenu') | translate"
+      >
+        <app-icon [name]="menuOpen() ? 'x' : 'menu'"></app-icon>
+      </button>
+    </div>
+  </nav>
+
+  @if (menuOpen()) {
+    <div class="mobile-menu" id="mobile-menu">
+      <div class="mobile-menu__inner">
+        @for (item of navItems; track item.href) {
+          <a class="mobile-menu__link" [href]="item.href" (click)="closeMenu()">{{ item.labelKey | translate }}</a>
+        }
+        <a class="button-primary mobile-menu__cta" href="#acceso" (click)="closeMenu()">
+          {{ 'nav.cta' | translate }}
+        </a>
+      </div>
+    </div>
+  }
+</header>
+
+<section class="hero" id="inicio">
+  <div class="hero__orb hero__orb--left"></div>
+  <div class="hero__orb hero__orb--right"></div>
+
+  <div class="hero__grid fc-container">
+    <div class="hero__content">
+      <div class="eyebrow hero__badge">
+        <span class="hero__badge-dot"></span>
+        {{ 'hero.badge' | translate }}
+      </div>
+
+      <h1 class="hero__title">
+        {{ 'hero.headlineStart' | translate }}
+        <span class="accent-serif accent-coral">{{ 'hero.headlineHighlight' | translate }}</span>
+      </h1>
+
+      <p class="hero__lead">{{ 'hero.subheadline' | translate }}</p>
+
+      <div class="hero__cta">
+        <a class="button-primary" href="#acceso">
+          {{ 'hero.cta' | translate }}
+          <app-icon name="arrow" [size]="19"></app-icon>
+        </a>
+        <a class="button-secondary" href="#como-funciona">{{ 'hero.demo' | translate }}</a>
+      </div>
+
+      <ul class="hero__checks">
+        @for (key of checkKeys; track key) {
+          <li>
+            <app-icon name="check" [size]="17"></app-icon>
+            {{ key | translate }}
+          </li>
+        }
+      </ul>
+    </div>
+
+    <div class="hero__visual">
+      <div class="hero__photo-frame">
+        <img
+          class="hero__photo"
+          [src]="heroImage"
+          [alt]="'hero.imageAlt' | translate"
+          width="1200"
+          height="1275"
+          fetchpriority="high"
+        />
+        <div class="hero__photo-shade"></div>
+      </div>
+
+      <div class="hero__status">
+        <div class="hero__status-head">
+          <span class="hero__label">{{ 'hero.status.label' | translate }}</span>
+          <span class="hero__online">
+            <span class="hero__online-dot"></span>
+            {{ 'hero.status.online' | translate }}
+          </span>
+        </div>
+        <div class="hero__status-body">
+          <span class="hero__status-icon"><app-icon name="location" [size]="21"></app-icon></span>
+          <div>
+            <p class="hero__status-title">{{ 'hero.status.title' | translate }}</p>
+            <p class="hero__status-meta">{{ 'hero.status.updated' | translate }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__zone">
+        <span class="hero__zone-icon"><app-icon name="shield" [size]="20"></app-icon></span>
+        <div>
+          <p class="hero__zone-title">{{ 'hero.zone.title' | translate }}</p>
+          <p class="hero__zone-meta">{{ 'hero.zone.detail' | translate }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

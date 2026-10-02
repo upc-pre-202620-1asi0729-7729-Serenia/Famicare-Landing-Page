@@ -1,0 +1,28 @@
+<section class="how" id="como-funciona">
+  <div class="how__inner fc-container">
+    <div class="how__grid">
+
+      <div>
+        <div class="eyebrow eyebrow-dark how__badge">{{ 'howItWorks.badge' | translate }}</div>
+        <h2 class="section-title how__title">
+          {{ 'howItWorks.titleStart' | translate }}
+          <span class="accent-serif accent-peach">{{ 'howItWorks.titleHighlight' | translate }}</span>
+        </h2>
+        <p class="how__copy">{{ 'howItWorks.subtitle' | translate }}</p>
+      </div>
+
+      <ol class="how__steps">
+        @for (key of steps; track key; let i = $index) {
+          <li class="step">
+            <span class="step__number">0{{ i + 1 }}</span>
+            <div>
+              <h3 class="step__title">{{ key + '.title' | translate }}</h3>
+              <p class="step__text">{{ key + '.text' | translate }}</p>
+            </div>
+          </li>
+        }
+      </ol>
+
+    </div>
+  </div>
+</section>

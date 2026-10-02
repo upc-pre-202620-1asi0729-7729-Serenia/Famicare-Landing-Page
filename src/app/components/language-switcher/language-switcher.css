@@ -1,0 +1,19 @@
+/* Selector de idioma con el look de la landing: píldora, verde Famicare. */
+:host {
+  display: inline-flex;
+}
+
+mat-button-toggle-group {
+  --mat-button-toggle-height: 2.25rem;
+  --mat-button-toggle-shape: 999px;
+  --mat-button-toggle-background-color: rgba(255, 255, 255, 0.62);
+  --mat-button-toggle-text-color: #486562;
+  --mat-button-toggle-selected-state-background-color: #176b61;
+  --mat-button-toggle-selected-state-text-color: #ffffff;
+  --mat-button-toggle-divider-color: rgba(21, 60, 58, 0.15);
+  --mat-button-toggle-state-layer-color: #176b61;
+  --mat-button-toggle-label-text-font: "DM Sans", sans-serif;
+  --mat-button-toggle-label-text-size: 0.78rem;
+  --mat-button-toggle-label-text-weight: 800;
+  --mat-button-toggle-label-text-tracking: 0.04em;
+}
