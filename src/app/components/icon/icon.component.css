@@ -1,0 +1,11 @@
+/* El svg es `block` (como en el preflight de Tailwind) para que el icono no
+   herede la altura de línea del texto que lo rodea. */
+:host {
+  display: block;
+  width: fit-content;
+  flex: none;
+}
+
+svg {
+  display: block;
+}

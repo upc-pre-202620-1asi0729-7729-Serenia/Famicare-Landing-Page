@@ -1,0 +1,10 @@
+<section class="highlights">
+  <div class="highlights__grid fc-container">
+    @for (key of items; track key) {
+      <div class="highlight">
+        <p class="highlight__title">{{ key + '.title' | translate }}</p>
+        <p class="highlight__text">{{ key + '.text' | translate }}</p>
+      </div>
+    }
+  </div>
+</section>

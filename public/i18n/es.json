@@ -1,0 +1,156 @@
+{
+  "nav": {
+    "ariaLabel": "Navegación principal",
+    "howItWorks": "Cómo funciona",
+    "benefits": "Beneficios",
+    "opensource": "Open source",
+    "about": "Nosotros",
+    "cta": "Solicitar acceso",
+    "openMenu": "Abrir menú",
+    "closeMenu": "Cerrar menú",
+    "language": "Idioma"
+  },
+  "hero": {
+    "badge": "Tecnología que cuida contigo",
+    "headlineStart": "Cerca de quienes amas,",
+    "headlineHighlight": "estés donde estés.",
+    "subheadline": "Famicare conecta a las familias con sus adultos mayores mediante ubicación en tiempo real, zonas seguras y alertas oportunas, sin quitarles independencia.",
+    "cta": "Quiero conocer Famicare",
+    "demo": "Ver cómo funciona",
+    "checks": ["Fácil de usar", "Privacidad primero", "Código abierto"],
+    "imageAlt": "Un padre adulto mayor paseando acompañado por su hija",
+    "status": {
+      "label": "Estado actual",
+      "online": "En línea",
+      "title": "Papá está en casa",
+      "updated": "Actualizado ahora"
+    },
+    "zone": {
+      "title": "Zona segura activa",
+      "detail": "Hogar · radio de 300 m"
+    }
+  },
+  "highlights": {
+    "items": [
+      { "title": "Acompañamiento", "text": "sin invadir su autonomía" },
+      { "title": "Alertas oportunas", "text": "para actuar con rapidez" },
+      { "title": "Una sola red", "text": "para toda la familia" }
+    ]
+  },
+  "features": {
+    "badge": "Cuidado conectado",
+    "titleStart": "Más tranquilidad para ti.",
+    "titleHighlight": "Más libertad para ellos.",
+    "subtitle": "La información esencial, sin complicaciones. Famicare reúne las herramientas que tu red necesita para acompañar mejor.",
+    "items": {
+      "location": {
+        "title": "Ubicación en tiempo real",
+        "description": "Consulta dónde se encuentra tu familiar y revisa su actividad reciente desde un mapa claro y accesible."
+      },
+      "safeZones": {
+        "title": "Zonas seguras",
+        "description": "Define espacios de confianza y recibe una alerta si tu familiar entra o sale de ellos."
+      },
+      "alerts": {
+        "title": "Alertas que importan",
+        "description": "Entérate ante una salida de zona, inactividad prolongada o cuando se active el botón de ayuda."
+      },
+      "careNetwork": {
+        "title": "Red de cuidado",
+        "description": "Invita a familiares y cuidadores para coordinar responsabilidades desde un mismo lugar."
+      }
+    }
+  },
+  "howItWorks": {
+    "badge": "Simple desde el primer día",
+    "titleStart": "Tres pasos para cuidar",
+    "titleHighlight": "en equipo.",
+    "subtitle": "Diseñado para familias reales: configuración sencilla, información comprensible y avisos accionables.",
+    "steps": [
+      {
+        "title": "Crea tu red",
+        "text": "Registra a tu familiar e invita a las personas que participan en su cuidado."
+      },
+      {
+        "title": "Vincula el dispositivo",
+        "text": "Conecta la pulsera o colgante IoT con GPS y botón de ayuda."
+      },
+      {
+        "title": "Acompaña con tranquilidad",
+        "text": "Consulta su ubicación y recibe avisos cuando realmente te necesite."
+      }
+    ]
+  },
+  "clientFeatures": {
+    "badge": "Pensado para las personas",
+    "titleStart": "Información clara para tomar",
+    "titleHighlight": "mejores decisiones.",
+    "subtitle": "Nada de datos difíciles de interpretar. Cada pantalla prioriza lo que necesitas saber ahora y quién puede ayudarte.",
+    "points": [
+      "Estado del dispositivo y batería siempre visibles.",
+      "Roles claros para familiares y cuidadores.",
+      "Historial de ubicación y actividad en un solo lugar."
+    ],
+    "dashboard": {
+      "label": "Vista general",
+      "greeting": "Buenos días, Andrea",
+      "mapLabel": "Mapa con la ubicación actual",
+      "device": "Dispositivo",
+      "deviceStatus": "Conectado",
+      "battery": "Batería",
+      "batteryLevel": "82%",
+      "noticeTitle": "Aviso atendido",
+      "noticeText": "La red de cuidado ya está al tanto."
+    }
+  },
+  "opensource": {
+    "title": "Abierto para avanzar juntos.",
+    "text": "Famicare es un proyecto open source en desarrollo. Construimos de forma transparente para que la comunidad pueda revisar, aprender y aportar a una tecnología de cuidado más humana.",
+    "cta": "Quiero participar",
+    "note": "Próximamente compartiremos el repositorio público y la guía de contribución."
+  },
+  "aboutTeam": {
+    "badge": "Creado por Serenia",
+    "titleStart": "Cuidar a distancia no debería sentirse",
+    "titleHighlight": "distante.",
+    "text": "Somos una startup peruana que desarrolla soluciones accesibles de cuidado y seguridad para adultos mayores, con foco en la tranquilidad de las familias y el respeto por la autonomía de cada persona.",
+    "mission": {
+      "title": "Nuestra misión",
+      "text": "Brindar tranquilidad mediante tecnología inclusiva y fácil de usar."
+    },
+    "vision": {
+      "title": "Nuestra visión",
+      "text": "Ser referentes de cuidado conectado en Latinoamérica."
+    }
+  },
+  "contact": {
+    "badge": "Acceso anticipado",
+    "titleStart": "Sé parte de una nueva forma de",
+    "titleHighlight": "estar cerca.",
+    "subtitle": "Déjanos tu correo para conocer los avances del proyecto, probar las primeras versiones o colaborar con la comunidad.",
+    "email": {
+      "label": "Correo electrónico",
+      "placeholder": "tu@correo.com",
+      "error": "Escribe un correo electrónico válido."
+    },
+    "submit": "Mantenerme al tanto",
+    "sending": "Enviando…",
+    "sendError": "No pudimos enviar tu correo. Inténtalo de nuevo en unos minutos.",
+    "privacy": "Sin spam. Solo avances importantes del proyecto.",
+    "success": {
+      "title": "Gracias por sumarte.",
+      "text": "Te avisaremos cuando haya novedades de Famicare."
+    }
+  },
+  "footer": {
+    "description": "Tecnología de cuidado y seguridad para acompañar con tranquilidad y respetar la autonomía.",
+    "links": {
+      "benefits": "Beneficios",
+      "howItWorks": "Cómo funciona",
+      "opensource": "Open source",
+      "about": "Serenia"
+    },
+    "copyright": "© {{year}} Serenia. Proyecto académico open source.",
+    "tagline": "Diseñado con respeto, claridad y cuidado."
+  }
+}

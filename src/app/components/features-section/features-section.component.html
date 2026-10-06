@@ -1,0 +1,27 @@
+<section class="features section-space" id="beneficios">
+  <div class="fc-container">
+
+    <div class="features__header">
+      <div class="eyebrow features__badge">{{ 'features.badge' | translate }}</div>
+      <h2 class="section-title">
+        {{ 'features.titleStart' | translate }}
+        <span class="accent-serif accent-teal">{{ 'features.titleHighlight' | translate }}</span>
+      </h2>
+      <p class="section-copy features__copy">{{ 'features.subtitle' | translate }}</p>
+    </div>
+
+    <div class="features__grid">
+      @for (feature of features; track feature.key; let i = $index) {
+        <article class="feature">
+          <div class="feature__top">
+            <span class="feature__icon"><app-icon [name]="feature.icon"></app-icon></span>
+            <span class="feature__index">0{{ i + 1 }}</span>
+          </div>
+          <h3 class="feature__title">{{ ('features.items.' + feature.key + '.title') | translate }}</h3>
+          <p class="feature__text">{{ ('features.items.' + feature.key + '.description') | translate }}</p>
+        </article>
+      }
+    </div>
+
+  </div>
+</section>

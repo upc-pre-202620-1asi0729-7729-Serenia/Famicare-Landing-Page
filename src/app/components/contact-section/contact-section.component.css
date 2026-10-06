@@ -1,0 +1,143 @@
+:host {
+  display: block;
+}
+
+.access__inner {
+  max-width: 56rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+  text-align: center;
+}
+
+.access__badge {
+  margin-bottom: 1.25rem;
+}
+
+.access__copy {
+  max-width: 42rem;
+  margin-top: 1.25rem;
+  margin-inline: auto;
+}
+
+.access__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 36rem;
+  margin-top: 2.25rem;
+  margin-inline: auto;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.access__input {
+  min-width: 0;
+  flex: 1;
+  height: 3.5rem;
+  border: 1px solid rgba(21, 60, 58, 0.2);
+  border-radius: 999px;
+  background: #fff;
+  padding-inline: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  outline: none;
+  transition:
+    border-color 150ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 150ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.access__input:focus {
+  border-color: var(--fc-teal);
+  box-shadow: 0 0 0 4px rgba(23, 107, 97, 0.1);
+}
+
+.access__input[aria-invalid='true'] {
+  border-color: #b4452a;
+}
+
+.access__submit {
+  height: 3.5rem;
+  justify-content: center;
+}
+
+.access__submit:disabled {
+  opacity: 0.7;
+  cursor: progress;
+  transform: none;
+}
+
+.access__error {
+  max-width: 36rem;
+  margin-top: 0.75rem;
+  margin-inline: auto;
+  color: #b4452a;
+  font-size: 0.875rem;
+  line-height: calc(10 / 7);
+  font-weight: 600;
+}
+
+.access__success {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 36rem;
+  margin-top: 2.25rem;
+  margin-inline: auto;
+  border: 1px solid rgba(23, 107, 97, 0.2);
+  border-radius: 1rem;
+  background: var(--fc-mint);
+  padding: 1.25rem;
+  text-align: left;
+}
+
+.access__success-icon {
+  display: grid;
+  width: 2.25rem;
+  height: 2.25rem;
+  flex: none;
+  place-items: center;
+  border-radius: 999px;
+  background: var(--fc-teal);
+  color: #fff;
+}
+
+.access__success-title {
+  font-weight: 800;
+}
+
+.access__success-text {
+  margin-top: 0.125rem;
+  color: var(--fc-text-muted);
+  font-size: 0.875rem;
+  line-height: calc(10 / 7);
+}
+
+.access__privacy {
+  margin-top: 1rem;
+  color: var(--fc-text-faint);
+  font-size: 0.75rem;
+  line-height: calc(4 / 3);
+}
+
+@media (min-width: 40rem) {
+  .access__form {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 64rem) {
+  .access__inner {
+    padding-inline: 2rem;
+  }
+}
